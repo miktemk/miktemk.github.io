@@ -121,17 +121,18 @@ var AppModule = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AssetUrls; });
 var AssetUrls = {
-    vocabFile: 'assets/data/result_asdfghjkl.txt',
+    // vocabFile: 'assets/data/result_asdfghjkl.txt',
+    vocabFile: 'assets/data/result_nioptesa.txt',
     bg_dunes_1000: 'assets/img/bg_dunes_1000.png',
     bg_dunes_inner_1000: 'assets/img/bg_dunes_inner_1000.png',
     raft_800: 'assets/img/raft_800.png',
     tree1: 'assets/img/varia/palm_tree1_150.png',
     tree2: 'assets/img/varia/palm_tree2_130.png',
     tree3: 'assets/img/varia/palm_tree3_130.png',
-    pyramid1: 'assets/img/varia/egypt_collonade_360.png',
-    pyramid2: 'assets/img/varia/egypt_obelisk1_80.png',
-    pyramid3: 'assets/img/varia/egypt_obelisk2_80.png',
-    pyramid4: 'assets/img/varia/egypt_pyramid_280.png',
+    building_collonade: 'assets/img/varia/egypt_collonade_360.png',
+    building_obelisk1: 'assets/img/varia/egypt_obelisk1_80.png',
+    building_obelisk2: 'assets/img/varia/egypt_obelisk2_80.png',
+    building_pyramid: 'assets/img/varia/egypt_pyramid_280.png',
     gameOver: 'assets/img/game_over_tmp.png',
     rateProgress: {
         empty: 'assets/img/rate_progress.png',
@@ -144,6 +145,14 @@ var AssetUrls = {
         mask3: 'assets/img/villain/mask-hippo.png',
         mask4: 'assets/img/villain/mask-jackal.png',
     },
+    titles: {
+        nioptesa: 'assets/img/titles/nioptesa-logo-500.png',
+    },
+    keyboards: {
+        qwerty: 'assets/img/kb/keyboard.svg',
+        oneKey: 'assets/img/kb/one-button-letter.svg',
+        oneKeyFaint: 'assets/img/kb/one-button-letter-faint.svg',
+    },
     spritesheet: {
         riverWave: 'assets/img/wave_comic_50.png',
         splash: 'assets/img/spritesheet-splash.png',
@@ -154,6 +163,10 @@ var AssetUrls = {
         tomkarate: {
             img: 'assets/img/spritesheet-tomkarate.png',
             json: 'assets/img/spritesheet-tomkarate.json'
+        },
+        fatzorro: {
+            img: 'assets/img/spritesheet-fatzorro.png',
+            json: 'assets/img/spritesheet-fatzorro.json'
         },
         logs: {
             img: 'assets/img/spritesheet-log-debris.png',
@@ -203,15 +216,166 @@ var MyUtils = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/jt-game/game-models.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QwertyKeys; });
+/* unused harmony export GameLevel */
+/* unused harmony export MyGameGlobals */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return SampleDebugGameLevels; });
+var QwertyKeys;
+(function (QwertyKeys) {
+    QwertyKeys[QwertyKeys["Tilde"] = 0] = "Tilde";
+    QwertyKeys[QwertyKeys["Oem1"] = 1] = "Oem1";
+    QwertyKeys[QwertyKeys["Oem2"] = 2] = "Oem2";
+    QwertyKeys[QwertyKeys["Oem3"] = 3] = "Oem3";
+    QwertyKeys[QwertyKeys["Oem4"] = 4] = "Oem4";
+    QwertyKeys[QwertyKeys["Oem5"] = 5] = "Oem5";
+    QwertyKeys[QwertyKeys["Oem6"] = 6] = "Oem6";
+    QwertyKeys[QwertyKeys["Oem7"] = 7] = "Oem7";
+    QwertyKeys[QwertyKeys["Oem8"] = 8] = "Oem8";
+    QwertyKeys[QwertyKeys["Oem9"] = 9] = "Oem9";
+    QwertyKeys[QwertyKeys["Oem0"] = 10] = "Oem0";
+    QwertyKeys[QwertyKeys["OemMinus"] = 11] = "OemMinus";
+    QwertyKeys[QwertyKeys["OemPlus"] = 12] = "OemPlus";
+    QwertyKeys[QwertyKeys["Q"] = 13] = "Q";
+    QwertyKeys[QwertyKeys["W"] = 14] = "W";
+    QwertyKeys[QwertyKeys["E"] = 15] = "E";
+    QwertyKeys[QwertyKeys["R"] = 16] = "R";
+    QwertyKeys[QwertyKeys["T"] = 17] = "T";
+    QwertyKeys[QwertyKeys["Y"] = 18] = "Y";
+    QwertyKeys[QwertyKeys["U"] = 19] = "U";
+    QwertyKeys[QwertyKeys["I"] = 20] = "I";
+    QwertyKeys[QwertyKeys["O"] = 21] = "O";
+    QwertyKeys[QwertyKeys["P"] = 22] = "P";
+    QwertyKeys[QwertyKeys["BracketOpen"] = 23] = "BracketOpen";
+    QwertyKeys[QwertyKeys["BracketClose"] = 24] = "BracketClose";
+    QwertyKeys[QwertyKeys["Backslash"] = 25] = "Backslash";
+    QwertyKeys[QwertyKeys["A"] = 26] = "A";
+    QwertyKeys[QwertyKeys["S"] = 27] = "S";
+    QwertyKeys[QwertyKeys["D"] = 28] = "D";
+    QwertyKeys[QwertyKeys["F"] = 29] = "F";
+    QwertyKeys[QwertyKeys["G"] = 30] = "G";
+    QwertyKeys[QwertyKeys["H"] = 31] = "H";
+    QwertyKeys[QwertyKeys["J"] = 32] = "J";
+    QwertyKeys[QwertyKeys["K"] = 33] = "K";
+    QwertyKeys[QwertyKeys["L"] = 34] = "L";
+    QwertyKeys[QwertyKeys["Colon"] = 35] = "Colon";
+    QwertyKeys[QwertyKeys["Quote"] = 36] = "Quote";
+    QwertyKeys[QwertyKeys["Z"] = 37] = "Z";
+    QwertyKeys[QwertyKeys["X"] = 38] = "X";
+    QwertyKeys[QwertyKeys["C"] = 39] = "C";
+    QwertyKeys[QwertyKeys["V"] = 40] = "V";
+    QwertyKeys[QwertyKeys["B"] = 41] = "B";
+    QwertyKeys[QwertyKeys["N"] = 42] = "N";
+    QwertyKeys[QwertyKeys["M"] = 43] = "M";
+    QwertyKeys[QwertyKeys["Comma"] = 44] = "Comma";
+    QwertyKeys[QwertyKeys["Period"] = 45] = "Period";
+    QwertyKeys[QwertyKeys["Slash"] = 46] = "Slash";
+})(QwertyKeys || (QwertyKeys = {}));
+var GameLevel = /** @class */ (function () {
+    function GameLevel() {
+    }
+    return GameLevel;
+}());
+
+var MyGameGlobals = /** @class */ (function () {
+    function MyGameGlobals() {
+    }
+    return MyGameGlobals;
+}());
+
+var SampleDebugGameLevels = [
+    {
+        name: 'Homerow',
+        vocabFile: '/assets/data/result_asdfghjkl.txt',
+        keysActive: [
+            { pos: QwertyKeys.A, letter: 'A' },
+            { pos: QwertyKeys.S, letter: 'S' },
+            { pos: QwertyKeys.D, letter: 'D' },
+            { pos: QwertyKeys.F, letter: 'F' },
+            { pos: QwertyKeys.G, letter: 'G' },
+            { pos: QwertyKeys.H, letter: 'H' },
+            { pos: QwertyKeys.J, letter: 'J' },
+            { pos: QwertyKeys.K, letter: 'K' },
+            { pos: QwertyKeys.L, letter: 'L' },
+        ],
+        keysFaint: [],
+    },
+    {
+        name: 'Homerow + E',
+        vocabFile: '/assets/data/result_asdfghjkl_e.txt',
+        keysActive: [
+            { pos: QwertyKeys.E, letter: 'E' },
+        ],
+        keysFaint: [
+            { pos: QwertyKeys.A, letter: 'A' },
+            { pos: QwertyKeys.S, letter: 'S' },
+            { pos: QwertyKeys.D, letter: 'D' },
+            { pos: QwertyKeys.F, letter: 'F' },
+            { pos: QwertyKeys.G, letter: 'G' },
+            { pos: QwertyKeys.H, letter: 'H' },
+            { pos: QwertyKeys.J, letter: 'J' },
+            { pos: QwertyKeys.K, letter: 'K' },
+            { pos: QwertyKeys.L, letter: 'L' },
+        ],
+    },
+    {
+        name: 'Letter R',
+        vocabFile: '/assets/data/result_asdfghjkle_r.txt',
+        keysActive: [
+            { pos: QwertyKeys.E, letter: 'R' },
+        ],
+        keysFaint: [
+            { pos: QwertyKeys.E, letter: 'E' },
+            { pos: QwertyKeys.A, letter: 'A' },
+            { pos: QwertyKeys.S, letter: 'S' },
+            { pos: QwertyKeys.D, letter: 'D' },
+            { pos: QwertyKeys.F, letter: 'F' },
+            { pos: QwertyKeys.G, letter: 'G' },
+            { pos: QwertyKeys.H, letter: 'H' },
+            { pos: QwertyKeys.J, letter: 'J' },
+            { pos: QwertyKeys.K, letter: 'K' },
+            { pos: QwertyKeys.L, letter: 'L' },
+        ],
+    },
+    {
+        name: 'Letter I',
+        vocabFile: '/assets/data/result_asdfghjkler_i.txt',
+        keysActive: [
+            { pos: QwertyKeys.E, letter: 'I' },
+        ],
+        keysFaint: [
+            { pos: QwertyKeys.E, letter: 'R' },
+            { pos: QwertyKeys.E, letter: 'E' },
+            { pos: QwertyKeys.A, letter: 'A' },
+            { pos: QwertyKeys.S, letter: 'S' },
+            { pos: QwertyKeys.D, letter: 'D' },
+            { pos: QwertyKeys.F, letter: 'F' },
+            { pos: QwertyKeys.G, letter: 'G' },
+            { pos: QwertyKeys.H, letter: 'H' },
+            { pos: QwertyKeys.J, letter: 'J' },
+            { pos: QwertyKeys.K, letter: 'K' },
+            { pos: QwertyKeys.L, letter: 'L' },
+        ],
+    },
+];
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/jt-game/game-sprites.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export RandomSidescrollingArtifactsConfig */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RandomSidescrollingArtifacts; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return RateMeterUiSprite; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return VillainOnAShipSpriteFactory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return VillainComplexSpriteFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return RandomSidescrollingArtifacts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return RateMeterUiSprite; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return RiverWithWavesFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KeyboardSpriteFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return VillainOnAShipSpriteFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return VillainComplexSpriteFactory; });
 /* unused harmony export VillainOnAShipSprite */
 /* unused harmony export VillainComplexSpriteState */
 /* unused harmony export VillainComplexSprite */
@@ -220,6 +384,8 @@ var MyUtils = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assets_nioptesa__ = __webpack_require__("../../../../../src/app/jt-game/assets-nioptesa.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__game_commons__ = __webpack_require__("../../../../../src/app/jt-game/game-commons.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__game_models__ = __webpack_require__("../../../../../src/app/jt-game/game-models.ts");
+
 
 
 
@@ -304,6 +470,159 @@ var RateMeterUiSprite = /** @class */ (function () {
         game.load.image('rateProgressFull', __WEBPACK_IMPORTED_MODULE_2__assets_nioptesa__["a" /* AssetUrls */].rateProgress.full);
     };
     return RateMeterUiSprite;
+}());
+
+var RiverWithWavesFactory = /** @class */ (function () {
+    function RiverWithWavesFactory() {
+    }
+    RiverWithWavesFactory.prototype.preload = function (game) {
+        game.load.spritesheet('small-wave', __WEBPACK_IMPORTED_MODULE_2__assets_nioptesa__["a" /* AssetUrls */].spritesheet.riverWave, 50, 50, 5);
+    };
+    RiverWithWavesFactory.prototype.createRiverWithWaves = function (game, riverY) {
+        var riverH = game.height - riverY;
+        var bmd = game.add.bitmapData(800, riverH);
+        bmd.ctx.beginPath();
+        bmd.ctx.rect(0, 0, 800, riverH);
+        bmd.ctx.fillStyle = '#29acdb';
+        bmd.ctx.fill();
+        var drawnObject = game.add.sprite(0, riverY, bmd);
+        // .... create waves
+        var nWaves = 20;
+        for (var i = 0; i < nWaves; i++) {
+            var wave = game.add.sprite(game.world.randomX, (Math.random() * (riverH - 50)) + riverY - 10, 'small-wave');
+            var randScale = Math.random() * 1 + 0.5;
+            wave.scale.setTo(randScale, randScale);
+            var anim = wave.animations.add('wavesplash', [0, 1, 2, 3, 4], 10, false);
+            anim.onComplete.add(function (waveSprite, animation) {
+                waveSprite.x = game.world.randomX;
+                waveSprite.y = (Math.random() * (riverH - 50)) + riverY - 10;
+                waveSprite.animations.play('wavesplash');
+            }, game);
+            wave.animations.play('wavesplash');
+            wave.animations.next(Math.floor(Math.random() * 5)); // LESSON: 82fdd785: this only works after `play` has been called
+            //wave.animations.play('wavesplash', Math.floor(Math.random() * 5 + 5)); // NOTE: 82fdd785: this works too
+        }
+    };
+    return RiverWithWavesFactory;
+}());
+
+var KeyboardSpriteFactory = /** @class */ (function () {
+    function KeyboardSpriteFactory() {
+        this.QwertySvgPositions = {};
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Tilde] = this.calcQwertyPos(0, 0);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Oem1] = this.calcQwertyPos(0, 1);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Oem2] = this.calcQwertyPos(0, 2);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Oem3] = this.calcQwertyPos(0, 3);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Oem4] = this.calcQwertyPos(0, 4);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Oem5] = this.calcQwertyPos(0, 5);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Oem6] = this.calcQwertyPos(0, 6);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Oem7] = this.calcQwertyPos(0, 7);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Oem8] = this.calcQwertyPos(0, 8);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Oem9] = this.calcQwertyPos(0, 9);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Oem0] = this.calcQwertyPos(0, 10);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].OemMinus] = this.calcQwertyPos(0, 11);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].OemPlus] = this.calcQwertyPos(0, 12);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Q] = this.calcQwertyPos(1, 0);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].W] = this.calcQwertyPos(1, 1);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].E] = this.calcQwertyPos(1, 2);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].R] = this.calcQwertyPos(1, 3);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].T] = this.calcQwertyPos(1, 4);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Y] = this.calcQwertyPos(1, 5);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].U] = this.calcQwertyPos(1, 6);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].I] = this.calcQwertyPos(1, 7);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].O] = this.calcQwertyPos(1, 8);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].P] = this.calcQwertyPos(1, 9);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].BracketOpen] = this.calcQwertyPos(1, 10);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].BracketClose] = this.calcQwertyPos(1, 11);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Backslash] = this.calcQwertyPos(1, 12);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].A] = this.calcQwertyPos(2, 0);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].S] = this.calcQwertyPos(2, 1);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].D] = this.calcQwertyPos(2, 2);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].F] = this.calcQwertyPos(2, 3);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].G] = this.calcQwertyPos(2, 4);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].H] = this.calcQwertyPos(2, 5);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].J] = this.calcQwertyPos(2, 6);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].K] = this.calcQwertyPos(2, 7);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].L] = this.calcQwertyPos(2, 8);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Colon] = this.calcQwertyPos(2, 9);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Quote] = this.calcQwertyPos(2, 10);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Z] = this.calcQwertyPos(3, 0);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].X] = this.calcQwertyPos(3, 1);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].C] = this.calcQwertyPos(3, 2);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].V] = this.calcQwertyPos(3, 3);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].B] = this.calcQwertyPos(3, 4);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].N] = this.calcQwertyPos(3, 5);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].M] = this.calcQwertyPos(3, 6);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Comma] = this.calcQwertyPos(3, 7);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Period] = this.calcQwertyPos(3, 8);
+        this.QwertySvgPositions[__WEBPACK_IMPORTED_MODULE_4__game_models__["a" /* QwertyKeys */].Slash] = this.calcQwertyPos(3, 9);
+    }
+    KeyboardSpriteFactory.prototype.preload = function (game) {
+        game.load.image('keyboard-qwerty', __WEBPACK_IMPORTED_MODULE_2__assets_nioptesa__["a" /* AssetUrls */].keyboards.qwerty);
+        game.load.image('keyboard-key', __WEBPACK_IMPORTED_MODULE_2__assets_nioptesa__["a" /* AssetUrls */].keyboards.oneKey);
+        game.load.image('keyboard-key-faint', __WEBPACK_IMPORTED_MODULE_2__assets_nioptesa__["a" /* AssetUrls */].keyboards.oneKeyFaint);
+    };
+    KeyboardSpriteFactory.prototype.createSprite = function (game, selectedKeys, selectedKeysFaint) {
+        var _this = this;
+        var root = game.add.sprite();
+        var kbSprite = game.add.image(0, 0, 'keyboard-qwerty');
+        function centerPosition(obj) {
+            obj.position.subtract(kbSprite.width / 2, kbSprite.height / 2);
+        }
+        centerPosition(kbSprite);
+        root.addChild(kbSprite);
+        selectedKeys.forEach(function (key) {
+            var kbKey = game.add.image(0, 0, 'keyboard-key');
+            var qwertyPosConfig = _this.QwertySvgPositions[key];
+            kbKey.position.setTo(qwertyPosConfig.x, qwertyPosConfig.y);
+            centerPosition(kbKey);
+            root.addChild(kbKey);
+            // TODO: a0b86b87: how to fade-in a sprite?
+        });
+        selectedKeysFaint.forEach(function (key) {
+            var kbKey = game.add.image(0, 0, 'keyboard-key-faint');
+            var qwertyPosConfig = _this.QwertySvgPositions[key];
+            kbKey.position.setTo(qwertyPosConfig.x, qwertyPosConfig.y);
+            centerPosition(kbKey);
+            root.addChild(kbKey);
+        });
+        //-------------- DEBUG!!! -----------------------
+        // let tmpLabel = game.add.text(-100, -100, `TODO:set`);
+        // tmpLabel.setText(`${kbKey.position.x}:${kbKey.position.y}`);
+        // root.addChild(tmpLabel);
+        // game.input.keyboard.addCallbacks(game, (e: KeyboardEvent) => {
+        //   // console.log(`KB: down`, e);
+        //   if (e.keyCode == Phaser.KeyCode.UP) {
+        //     kbKey.position.y -= 1;
+        //   }
+        //   if (e.keyCode == Phaser.KeyCode.DOWN) {
+        //     kbKey.position.y += 1;
+        //   }
+        //   if (e.keyCode == Phaser.KeyCode.LEFT) {
+        //     kbKey.position.x -= 1;
+        //   }
+        //   if (e.keyCode == Phaser.KeyCode.RIGHT) {
+        //     kbKey.position.x += 1;
+        //   }
+        //   tmpLabel.setText(`${kbKey.position.x}:${kbKey.position.y}`);
+        // }, (e: KeyboardEvent) => {
+        //   // console.log(`up`, e);
+        // }, (keyText: string) => {
+        //   // console.log(`press`, keyText);
+        // });
+        return root;
+    };
+    KeyboardSpriteFactory.prototype.calcQwertyPos = function (row, col) {
+        if (row == 0)
+            return new Phaser.Point(col * 28, 0); // Oem1 = (28:0)
+        if (row == 1)
+            return new Phaser.Point(col * 28 + 42, 28); // Oem1 = (42:28)
+        if (row == 2)
+            return new Phaser.Point(col * 28 + 49, 56); // Oem1 = (49:56)
+        if (row == 3)
+            return new Phaser.Point(col * 28 + 62, 84); // Oem1 = (62:84)
+    };
+    return KeyboardSpriteFactory;
 }());
 
 //#region --------------------------- villain ----------------------------
@@ -617,11 +936,13 @@ var VillainComplexSprite = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NioptesaGame; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AcousterNioptesa; });
+/* unused harmony export NioptesaGame */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__("../../../../lodash/lodash.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__ = __webpack_require__("../../../../../src/app/jt-game/assets-nioptesa.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game_sprites__ = __webpack_require__("../../../../../src/app/jt-game/game-sprites.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__game_models__ = __webpack_require__("../../../../../src/app/jt-game/game-models.ts");
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -635,6 +956,7 @@ var __extends = (this && this.__extends) || (function () {
 
 
 
+
 var AcousterNioptesa;
 (function (AcousterNioptesa) {
     var GameplayStates;
@@ -645,8 +967,9 @@ var AcousterNioptesa;
     })(GameplayStates || (GameplayStates = {}));
     var MyGameStateMain = /** @class */ (function (_super) {
         __extends(MyGameStateMain, _super);
-        function MyGameStateMain() {
-            var _this = _super !== null && _super.apply(this, arguments) || this;
+        function MyGameStateMain(gameGlobals) {
+            var _this = _super.call(this) || this;
+            _this.gameGlobals = gameGlobals;
             // TODO: move to contants
             _this.stellaX = 500;
             _this.stellaY = 100;
@@ -660,18 +983,17 @@ var AcousterNioptesa;
             game.load.image('bg-dunes', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].bg_dunes_1000);
             game.load.image('bg-grass', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].bg_dunes_inner_1000);
             game.load.image('raft', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].raft_800);
-            game.load.spritesheet('small-wave', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.riverWave, 50, 50, 5);
             game.load.spritesheet('splash', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.splash, 64, 64, 9);
             game.load.image('tree1', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].tree1);
             game.load.image('tree2', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].tree2);
             game.load.image('tree3', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].tree3);
-            game.load.image('pyramid1', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].pyramid1);
-            game.load.image('pyramid2', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].pyramid2);
-            game.load.image('pyramid3', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].pyramid3);
-            game.load.image('pyramid4', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].pyramid4);
+            game.load.image('pyramid1', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].building_collonade);
+            game.load.image('pyramid2', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].building_obelisk1);
+            game.load.image('pyramid3', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].building_obelisk2);
+            game.load.image('pyramid4', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].building_pyramid);
             game.load.image('game-over', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].gameOver);
-            game.load.text('vocab', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].vocabFile);
-            __WEBPACK_IMPORTED_MODULE_2__game_sprites__["b" /* RateMeterUiSprite */].preload(game);
+            game.load.text('vocab', this.gameGlobals.level.vocabFile);
+            __WEBPACK_IMPORTED_MODULE_2__game_sprites__["c" /* RateMeterUiSprite */].preload(game);
             // game.load.image('player', 'assets/img/player.svg');
             // game.load.image('player', 'assets/img/santo-gun.png');
             // game.load.image('bullet', 'assets/img/bullet.svg');
@@ -679,11 +1001,14 @@ var AcousterNioptesa;
             // LINK: https://www.leshylabs.com/apps/sstool/
             game.load.atlasJSONHash('hunter', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.hunter.img, __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.hunter.json, Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
             game.load.atlasJSONHash('tomkarate', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.tomkarate.img, __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.tomkarate.json, Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
+            game.load.atlasJSONHash('fatzorro', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.fatzorro.img, __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.fatzorro.json, Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
             game.load.atlasJSONHash('log-debris', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.logs.img, __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.logs.json, Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
             game.load.atlasJSONHash('blocks', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.blocks.img, __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.blocks.json, Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
-            this.villainFactory = new __WEBPACK_IMPORTED_MODULE_2__game_sprites__["c" /* VillainComplexSpriteFactory */]();
+            this.riverFactory = new __WEBPACK_IMPORTED_MODULE_2__game_sprites__["d" /* RiverWithWavesFactory */]();
+            this.riverFactory.preload(game);
+            this.villainFactory = new __WEBPACK_IMPORTED_MODULE_2__game_sprites__["e" /* VillainComplexSpriteFactory */]();
             this.villainFactory.preload(game);
-            this.villainShipFactory = new __WEBPACK_IMPORTED_MODULE_2__game_sprites__["d" /* VillainOnAShipSpriteFactory */](this.villainFactory);
+            this.villainShipFactory = new __WEBPACK_IMPORTED_MODULE_2__game_sprites__["f" /* VillainOnAShipSpriteFactory */](this.villainFactory);
             this.villainShipFactory.preload(game);
         };
         MyGameStateMain.prototype.create = function (game) {
@@ -693,7 +1018,7 @@ var AcousterNioptesa;
             // create river and mountains and pseudo-random scrolling trees/pyramids
             // NOTE: init like this for z-indexing
             this.bgScrollingDunes = game.add.tileSprite(0, 0, 800, 200, 'bg-dunes');
-            this.bgScrollingPyramids = new __WEBPACK_IMPORTED_MODULE_2__game_sprites__["a" /* RandomSidescrollingArtifacts */](game, ['pyramid1', 'pyramid2', 'pyramid3', 'pyramid4'], {
+            this.bgScrollingPyramids = new __WEBPACK_IMPORTED_MODULE_2__game_sprites__["b" /* RandomSidescrollingArtifacts */](game, ['pyramid1', 'pyramid2', 'pyramid3', 'pyramid4'], {
                 nObj: 6,
                 prandoSeed: 456,
                 prandoRange: 80,
@@ -702,7 +1027,7 @@ var AcousterNioptesa;
                 scale: { min: 0.4, max: 0.6 },
             });
             this.bgScrollingGrass = game.add.tileSprite(0, 0, 800, 130, 'bg-grass');
-            this.bgScrollingTrees = new __WEBPACK_IMPORTED_MODULE_2__game_sprites__["a" /* RandomSidescrollingArtifacts */](game, ['tree1', 'tree2', 'tree3'], {
+            this.bgScrollingTrees = new __WEBPACK_IMPORTED_MODULE_2__game_sprites__["b" /* RandomSidescrollingArtifacts */](game, ['tree1', 'tree2', 'tree3'], {
                 nObj: 15,
                 prandoSeed: 123,
                 prandoRange: 15,
@@ -712,24 +1037,7 @@ var AcousterNioptesa;
             });
             this.bgScrollingDunes.position.y = 40;
             this.bgScrollingGrass.position.y = 200;
-            this.game_add_River(game);
-            //--------------------------------------------------------------------
-            // create waves
-            var nWaves = 20;
-            for (var i = 0; i < nWaves; i++) {
-                var wave = game.add.sprite(game.world.randomX, (Math.random() * 280) + 320, 'small-wave');
-                var randScale = Math.random() * 1 + 0.5;
-                wave.scale.setTo(randScale, randScale);
-                var anim = wave.animations.add('wavesplash', [0, 1, 2, 3, 4], 10, false);
-                anim.onComplete.add(function (waveSprite, animation) {
-                    waveSprite.x = game.world.randomX;
-                    waveSprite.y = (Math.random() * 280) + 320;
-                    waveSprite.animations.play('wavesplash');
-                }, game);
-                wave.animations.play('wavesplash');
-                wave.animations.next(Math.floor(Math.random() * 5)); // LESSON: 82fdd785: this only works after `play` has been called
-                //wave.animations.play('wavesplash', Math.floor(Math.random() * 5 + 5)); // NOTE: 82fdd785: this works too
-            }
+            this.riverFactory.createRiverWithWaves(game, 330);
             //--------------------------------------------------------------------
             // TODO: 9d495005: how did they do explosions in space invaders?
             this.splashes = game.add.group();
@@ -757,13 +1065,20 @@ var AcousterNioptesa;
             this.hunter.animations.add('stand', ['hunter_stand'], 1, true);
             this.hunter.animations.add('jump', ['hunter_jump1', 'hunter_jump2', 'hunter_jump3'], 5, false);
             this.hunter.animations.add('shoot', ['hunter_shoot1', 'hunter_shoot2', 'hunter_shoot3', 'hunter_shoot4', 'hunter_stand'], 10, false);
-            this.hunter.scale = new Phaser.Point(0.6, 0.6);
+            this.hunter.scale.setTo(0.6, 0.6);
             this.tomKarate = game.add.sprite(0, 0, 'tomkarate', 'tomkarate_stand');
             this.tomKarate.anchor.setTo(0.5, 1);
             this.tomKarate.animations.add('stand', ['tomkarate_stand'], 1, true);
             this.tomKarate.animations.add('jump', ['tomkarate_jump'], 1, false);
             this.tomKarate.animations.add('punch', ['tomkarate_punch1', 'tomkarate_punch2', 'tomkarate_punch1', 'tomkarate_stand'], 10, false);
-            this.tomKarate.scale = new Phaser.Point(0.35, 0.35);
+            this.tomKarate.scale.setTo(0.35, 0.35);
+            this.fatZorro = game.add.sprite(0, 0, 'fatzorro', 'stand');
+            this.fatZorro.anchor.setTo(0.5, 1);
+            this.fatZorro.animations.add('stand', ['stand'], 1, true);
+            this.fatZorro.animations.add('jump', ['slip'], 1, false);
+            this.fatZorro.animations.add('attack1', ['attack1', 'attack2', 'attack3', 'attack4'], 10, false);
+            this.fatZorro.animations.add('attack2', ['attack4', 'attack3', 'attack2', 'attack1', 'stand'], 10, false);
+            this.fatZorro.scale.setTo(0.45, 0.45);
             //--------------------------------------------------------------------
             // make raft group
             this.raft = game.add.sprite(0, 0, 'raft');
@@ -822,7 +1137,7 @@ var AcousterNioptesa;
             this.gameOverSign.anchor.setTo(0.5, 0.5);
             this.gameOverSign.z = 1000;
             this.gameOverSign.visible = false;
-            this.rateMeterSprite = new __WEBPACK_IMPORTED_MODULE_2__game_sprites__["b" /* RateMeterUiSprite */](game);
+            this.rateMeterSprite = new __WEBPACK_IMPORTED_MODULE_2__game_sprites__["c" /* RateMeterUiSprite */](game);
             //--------------------------------------------------------------------
             // inputs
             // this.buttonFire = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
@@ -884,6 +1199,7 @@ var AcousterNioptesa;
             // revive raft and friends
             this.thoseWhoFallInWater.remove(this.hunter);
             this.thoseWhoFallInWater.remove(this.tomKarate);
+            this.thoseWhoFallInWater.remove(this.fatZorro);
             this.raftGroup.visible = true;
             this.addFriendsToRaftGroup();
             this.setGameplayState(GameplayStates.Stella);
@@ -918,16 +1234,22 @@ var AcousterNioptesa;
             this.emitterLogs.start(true, 2000, null, 15);
             this.hunter.animations.play('jump');
             this.tomKarate.animations.play('jump');
+            this.fatZorro.animations.play('jump');
             this.raftGroup.remove(this.hunter);
             this.raftGroup.remove(this.tomKarate);
+            this.raftGroup.remove(this.fatZorro);
             this.thoseWhoFallInWater.add(this.hunter);
             this.thoseWhoFallInWater.add(this.tomKarate);
+            this.thoseWhoFallInWater.add(this.fatZorro);
             this.hunter.body.velocity.x = -Math.random() * 100;
             this.hunter.body.velocity.y = -800 + Math.random() * 100;
             this.hunter.body.gravity.y = 1500;
             this.tomKarate.body.velocity.x = Math.random() * 100;
             this.tomKarate.body.velocity.y = -800 + Math.random() * 100;
             this.tomKarate.body.gravity.y = 1500;
+            this.fatZorro.body.velocity.x = Math.random() * 100;
+            this.fatZorro.body.velocity.y = -150 + Math.random() * 100;
+            this.fatZorro.body.gravity.y = 800;
             this.raftGroup.visible = false;
             game.time.events.add(Phaser.Timer.SECOND * 2, function () {
                 _this.gameOverSign.visible = true;
@@ -942,12 +1264,15 @@ var AcousterNioptesa;
         };
         MyGameStateMain.prototype.addFriendsToRaftGroup = function () {
             this.hunter.revive();
+            this.raftGroup.add(this.fatZorro);
             this.raftGroup.add(this.hunter);
             this.raftGroup.add(this.tomKarate);
-            this.hunter.reset(-50, -10);
+            this.hunter.reset(-60, -10);
             this.tomKarate.reset(50, -5);
+            this.fatZorro.reset(-10, -5);
             this.hunter.animations.play('stand');
             this.tomKarate.animations.play('stand');
+            this.fatZorro.animations.play('stand');
             if (this.hunter.body) {
                 this.hunter.body.velocity.x = 0;
                 this.hunter.body.velocity.y = 0;
@@ -957,6 +1282,11 @@ var AcousterNioptesa;
                 this.tomKarate.body.velocity.x = 0;
                 this.tomKarate.body.velocity.y = 0;
                 this.tomKarate.body.gravity.y = 0;
+            }
+            if (this.fatZorro.body) {
+                this.fatZorro.body.velocity.x = 0;
+                this.fatZorro.body.velocity.y = 0;
+                this.fatZorro.body.gravity.y = 0;
             }
         };
         MyGameStateMain.prototype.nextWord = function () {
@@ -984,10 +1314,12 @@ var AcousterNioptesa;
             var _this = this;
             if (this.gameplayState == GameplayStates.Stella) {
                 // .... which friend will attack?
-                if (this.stella.position.y < game.world.centerY - 100)
+                if (this.stella.position.y < game.world.centerY - 110)
                     this.hunter.animations.play('shoot');
-                else if (this.stella.position.y <= game.world.centerY + 50)
+                else if (this.stella.position.y <= game.world.centerY - 40)
                     this.hunter.animations.play('shoot');
+                else if (this.stella.position.y <= game.world.centerY + 40)
+                    this.fatZorro.animations.play((Math.random() > 0.7) ? 'attack1' : 'attack2');
                 else
                     this.tomKarate.animations.play('punch');
                 this.blowUpStella();
@@ -1005,7 +1337,10 @@ var AcousterNioptesa;
             else if (this.gameplayState == GameplayStates.Villain) {
                 if (this.villainShip.rockIsFlying) {
                     // .... which friend will attack?
-                    this.tomKarate.animations.play('punch');
+                    if (Math.random() > 0.5)
+                        this.tomKarate.animations.play('punch');
+                    else
+                        this.fatZorro.animations.play((Math.random() > 0.7) ? 'attack1' : 'attack2');
                     this.villainShip.killRockProjectile();
                     // .... next word!!!
                     this.game.time.events.add(0.2 * Phaser.Timer.SECOND, function () {
@@ -1021,10 +1356,10 @@ var AcousterNioptesa;
                     this.villainShip.villain.root.position.subtract(this.raftGroup.x, this.raftGroup.y); // NOTE: 147e9cda
                     this.villainShip.villain.root.body.gravity.y = 200;
                     // this.villainShip.villain.root.body.velocity.y = 100; // NOTE: linear fall looks cuter!
-                    console.log("TODO: transition to next level");
                     game.time.events.add(Phaser.Timer.SECOND * 3, function () {
-                        _this.gameOverSign.visible = true;
-                        _this.gameOverPrettyMuch = true;
+                        // this.gameOverSign.visible = true;
+                        // this.gameOverPrettyMuch = true;
+                        _this.game.state.start('levels');
                     }, game);
                 }
             }
@@ -1062,7 +1397,6 @@ var AcousterNioptesa;
             // }
             this.thoseWhoFallInWater.forEachAlive(function (sprite) {
                 // NOTE: 147e9cda: position is relative to the jumpingFriends group
-                console.log('forEachAlive', sprite.position.y);
                 if (sprite.position.y > 60) {
                     sprite.kill();
                     var splash = _this.splashes.getFirstExists(false);
@@ -1084,15 +1418,6 @@ var AcousterNioptesa;
                 this.breakRaft(game);
             }
         };
-        MyGameStateMain.prototype.game_add_River = function (game) {
-            var drawnObject;
-            var bmd = game.add.bitmapData(800, 350);
-            bmd.ctx.beginPath();
-            bmd.ctx.rect(0, 0, 800, 350);
-            bmd.ctx.fillStyle = '#29acdb';
-            bmd.ctx.fill();
-            drawnObject = game.add.sprite(0, 330, bmd);
-        };
         MyGameStateMain.prototype.game_add_typingTextSprite = function (game, text) {
             var textSprite = game.add.text(this.stellaX, this.stellaY, text, {
                 font: "50px Helvetica",
@@ -1110,9 +1435,13 @@ var AcousterNioptesa;
         };
         return MyGameStateMain;
     }(Phaser.State));
+    AcousterNioptesa.MyGameStateMain = MyGameStateMain;
     var NioptesaGame = /** @class */ (function () {
         function NioptesaGame(parent) {
-            var mainState = new MyGameStateMain();
+            var gameGlobals = {
+                level: __WEBPACK_IMPORTED_MODULE_3__game_models__["b" /* SampleDebugGameLevels */][1],
+            };
+            var mainState = new MyGameStateMain(gameGlobals);
             this.game = new Phaser.Game(800, 600, Phaser.CANVAS, parent, mainState);
         }
         return NioptesaGame;
@@ -1120,7 +1449,10 @@ var AcousterNioptesa;
     AcousterNioptesa.NioptesaGame = NioptesaGame;
     var SimpleGameCodepen = /** @class */ (function () {
         function SimpleGameCodepen() {
-            var mainState = new MyGameStateMain();
+            var gameGlobals = {
+                level: __WEBPACK_IMPORTED_MODULE_3__game_models__["b" /* SampleDebugGameLevels */][1],
+            };
+            var mainState = new MyGameStateMain(gameGlobals);
             this.game = new Phaser.Game(800, 600, Phaser.CANVAS, 'content', mainState); // LESSON: Phaser.CANVAS works in codepen, but Phaser.AUTO defaults to WEBGL for some reason and fails
         }
         return SimpleGameCodepen;
@@ -1131,6 +1463,325 @@ var AcousterNioptesa;
 var NioptesaGame = AcousterNioptesa.NioptesaGame;
 //======================= ...and uncomment these lines ===================================
 // window.onload = () => { new AcousterNioptesa.SimpleGameCodepen(); };
+// ... and also remove `export` from `export module AcousterNioptesa `
+// ... also codepen does not support this syntax: <ClassName> { ... }, so remove all `<RandomSidescrollingArtifactsConfig>`, etc
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/jt-game/sprite-test.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TestGame; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__game_sprites__ = __webpack_require__("../../../../../src/app/jt-game/game-sprites.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__ = __webpack_require__("../../../../../src/app/jt-game/assets-nioptesa.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_game__ = __webpack_require__("../../../../../src/app/jt-game/my-game.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__game_models__ = __webpack_require__("../../../../../src/app/jt-game/game-models.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+var AcousterNioptesaTest;
+(function (AcousterNioptesaTest) {
+    var MyGameStateSpriteTest = /** @class */ (function (_super) {
+        __extends(MyGameStateSpriteTest, _super);
+        function MyGameStateSpriteTest() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        MyGameStateSpriteTest.prototype.preload = function (game) {
+            this.villainFactory = new __WEBPACK_IMPORTED_MODULE_0__game_sprites__["e" /* VillainComplexSpriteFactory */]();
+            this.villainFactory.preload(game);
+            this.villainShipFactory = new __WEBPACK_IMPORTED_MODULE_0__game_sprites__["f" /* VillainOnAShipSpriteFactory */](this.villainFactory);
+            this.villainShipFactory.preload(game);
+        };
+        MyGameStateSpriteTest.prototype.create = function (game) {
+            var _this = this;
+            game.stage.backgroundColor = "#c4ebff";
+            game.add.text(0, 0, 'Press 1,2,3 to toggle different sprite states');
+            this.arcadePhysicsGroup00 = this.game.add.group(null, 'falling-sjit', true);
+            this.arcadePhysicsGroup00.enableBody = true;
+            this.arcadePhysicsGroup00.physicsBodyType = Phaser.Physics.ARCADE;
+            var villainShip = this.villainShipFactory.createSprite(game);
+            villainShip.root.position.setTo(game.world.centerX, game.world.centerY);
+            villainShip.declencheOminousFlying();
+            //----------------------------------------------------------------------------------------------------
+            game.input.keyboard.addCallbacks(game, function (e) {
+                // console.log(`KB: down`, e);
+                if (e.keyCode == Phaser.KeyCode.ONE) {
+                    villainShip.villain.DoArmspread();
+                }
+                else if (e.keyCode == Phaser.KeyCode.TWO) {
+                    villainShip.villain.DoEgyptianDance();
+                }
+                else if (e.keyCode == Phaser.KeyCode.THREE) {
+                    villainShip.villain.PlayFallAnimation();
+                }
+                else if (e.keyCode == Phaser.KeyCode.SPACEBAR) {
+                    villainShip.FireRock(_this.arcadePhysicsGroup00);
+                }
+                else if (e.keyCode == Phaser.KeyCode.X) {
+                    villainShip.declencheBlowUp();
+                    _this.arcadePhysicsGroup00.add(villainShip.villain.root);
+                    // villainShip.villain.root.body.gravity.y = 200;
+                    villainShip.villain.root.body.velocity.y = 100; // NOTE: linear fall looks cuter!
+                }
+            }, function (e) {
+                // console.log(`up`, e);
+            }, function (keyText) {
+                // console.log(`press`, keyText);
+            });
+        };
+        MyGameStateSpriteTest.prototype.update = function (game) {
+        };
+        return MyGameStateSpriteTest;
+    }(Phaser.State));
+    // #region ========================= goodies =====================================
+    var defaultColor = "#069";
+    var highlightColor = "#fb0";
+    var style = {
+        header: {
+            font: 'bold 60pt TheMinion',
+            fill: defaultColor,
+            align: 'center'
+        },
+        navitem: {
+            base: {
+                font: '30pt TheMinion',
+                align: 'left',
+                strokeThickness: 4
+            },
+            default: {
+                fill: defaultColor,
+                stroke: 'rgba(0,0,0,0)'
+            },
+            hover: {
+                fill: highlightColor,
+                stroke: 'rgba(200,200,200,0.5)'
+            }
+        }
+    };
+    var MyGameState_Menu = /** @class */ (function (_super) {
+        __extends(MyGameState_Menu, _super);
+        function MyGameState_Menu() {
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            _this.optionCount = 0;
+            return _this;
+        }
+        MyGameState_Menu.prototype.preload = function (game) {
+            game.load.image('nioptesa-title', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].titles.nioptesa);
+            this.villainFactory = new __WEBPACK_IMPORTED_MODULE_0__game_sprites__["e" /* VillainComplexSpriteFactory */]();
+            this.villainFactory.preload(game);
+        };
+        MyGameState_Menu.prototype.create = function (game) {
+            // .... background and shit
+            game.stage.backgroundColor = "#c4ebff";
+            // game.add.sprite(0, 0, 'menu-bg'); // TODO: pretty menu bg
+            var villainSpriteScale = 0.7;
+            var villainSpritrOffsetX = 250;
+            var villainSpritrOffsetY = 150;
+            var villainSprite1 = this.villainFactory.createSprite(game);
+            var villainSprite2 = this.villainFactory.createSprite(game);
+            villainSprite1.root.scale.setTo(villainSpriteScale, villainSpriteScale);
+            villainSprite2.root.scale.setTo(villainSpriteScale, villainSpriteScale);
+            villainSprite1.root.position.setTo(game.world.centerX - villainSpritrOffsetX, game.world.centerY + villainSpritrOffsetY);
+            villainSprite2.root.position.setTo(game.world.centerX + villainSpritrOffsetX, game.world.centerY + villainSpritrOffsetY);
+            villainSprite1.DoEgyptianDance();
+            villainSprite2.DoEgyptianDance();
+            // .... title and menu
+            var titleText = game.add.image(game.world.centerX, 150, 'nioptesa-title');
+            titleText.anchor.set(0.5);
+            // titleText.setShadow(3, 3, 'rgba(0,0,0,0.5)', 5);
+            // titleText.anchor.set(0.5);
+            // game.stage.disableVisibilityChange = true;
+            // game.add.sprite(0, 0, 'menu-bg');
+            // game.add.existing(titleText);
+            this.addMenuOption(game, 'QWERTY', function () {
+                game.state.start('levels', true, true);
+                // console.log('You clicked QWERTY!');
+            });
+            this.addMenuOption(game, 'DVORAK', function () {
+                console.log('You clicked DVORAK!');
+            });
+            this.addMenuOption(game, 'AlphaGrip', function () {
+                console.log('You clicked AlphaGrip!');
+            });
+        };
+        MyGameState_Menu.prototype.addMenuOption = function (game, text, callback) {
+            var txt = game.add.text(game.world.centerX, (this.optionCount * 40) + 300, text, style.navitem.default);
+            txt.anchor.set(0.5);
+            txt.inputEnabled = true;
+            txt.events.onInputUp.add(callback);
+            txt.events.onInputOver.add(function (target) {
+                target.setStyle(style.navitem.hover);
+            });
+            txt.events.onInputOut.add(function (target) {
+                target.setStyle(style.navitem.default);
+            });
+            this.optionCount++;
+        };
+        return MyGameState_Menu;
+    }(Phaser.State));
+    var MyGameState_LevelMap = /** @class */ (function (_super) {
+        __extends(MyGameState_LevelMap, _super);
+        function MyGameState_LevelMap(gameGlobals) {
+            var _this = _super.call(this) || this;
+            _this.gameGlobals = gameGlobals;
+            return _this;
+        }
+        MyGameState_LevelMap.prototype.preload = function (game) {
+            game.load.image('bg-dunes', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].bg_dunes_1000);
+            game.load.image('raft', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].raft_800);
+            game.load.image('collonade', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].building_collonade);
+            game.load.image('obelisk1', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].building_obelisk1);
+            game.load.image('obelisk2', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].building_obelisk2);
+            game.load.atlasJSONHash('blocks', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.blocks.img, __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.blocks.json, Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
+            game.load.atlasJSONHash('hunter', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.hunter.img, __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.hunter.json, Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
+            game.load.atlasJSONHash('tomkarate', __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.tomkarate.img, __WEBPACK_IMPORTED_MODULE_1__assets_nioptesa__["a" /* AssetUrls */].spritesheet.tomkarate.json, Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
+            this.riverFactory = new __WEBPACK_IMPORTED_MODULE_0__game_sprites__["d" /* RiverWithWavesFactory */]();
+            this.riverFactory.preload(game);
+            this.kbSpriteFactory = new __WEBPACK_IMPORTED_MODULE_0__game_sprites__["a" /* KeyboardSpriteFactory */]();
+            this.kbSpriteFactory.preload(game);
+        };
+        MyGameState_LevelMap.prototype.create = function (game) {
+            var SecondsTillStartAfterRaftMove = 2;
+            var RiverY = 430;
+            // .... background and shit
+            game.stage.backgroundColor = "#c4ebff";
+            this.riverFactory.createRiverWithWaves(game, RiverY);
+            // game.add.sprite(0, 0, 'menu-bg'); // TODO: pretty menu bg
+            this.bgScrollingDunes = game.add.tileSprite(0, 0, 800, 200, 'bg-dunes');
+            this.bgScrollingDunes.position.y = RiverY;
+            this.bgScrollingDunes.anchor.set(0, 1);
+            this.bgScrollingDunes.tilePosition.x = Math.random() * 800;
+            this.bgScrollingDunes.scale.set(1, 0.6);
+            //---------------------------------------------------
+            // city and oasis
+            this.citySprite = this.createCityAndOasis(game, RiverY, 'shitville');
+            //---------------------------------------------------
+            // raft
+            var raft = game.add.sprite(game.world.centerX - 150, game.world.centerY + 200, 'raft');
+            raft.anchor.setTo(0.5, 0.5);
+            raft.scale.setTo(0.25, 0.25);
+            // this.raft.width = 300;
+            // this.raft.height = 75;
+            var hunter = game.add.sprite(-150, -20, 'hunter', 'hunter_stand');
+            hunter.anchor.setTo(0.5, 1);
+            hunter.scale.setTo(1.3, 1.3);
+            var tomKarate = game.add.sprite(110, -20, 'tomkarate', 'tomkarate_stand');
+            tomKarate.anchor.setTo(0.5, 1);
+            tomKarate.scale.setTo(0.75, 0.75);
+            raft.addChild(hunter);
+            raft.addChild(tomKarate);
+            var raftBounce = game.add.tween(raft);
+            raftBounce.loop(true);
+            raftBounce.to({ y: game.world.centerY + 210 }, 1000, Phaser.Easing.Sinusoidal.Out);
+            raftBounce.to({ y: game.world.centerY + 200 }, 1000, Phaser.Easing.Sinusoidal.Out);
+            var raftGoto = game.add.tween(raft);
+            raftGoto.loop(false);
+            raftGoto.to({ x: game.world.centerX + 200 }, 1500, Phaser.Easing.Cubic.InOut);
+            raftGoto.start();
+            raftGoto.onComplete.addOnce(function () {
+                raftBounce.start(); // NOTE: this looks better, than starting raftBounce right away
+                game.time.events.add(Phaser.Timer.SECOND * SecondsTillStartAfterRaftMove, function () {
+                    //game.state.start('game');
+                }, game);
+            });
+            //---------------------------------------------------
+            // keyboard
+            this.kbSprite = this.kbSpriteFactory.createSprite(game, this.gameGlobals.level.keysActive.map(function (x) { return x.pos; }), this.gameGlobals.level.keysFaint.map(function (x) { return x.pos; }));
+            this.kbSprite.position.setTo(game.world.centerX, 150);
+            //let virtualImgTag = kbSprite.texture.baseTexture.source;
+            // titleText.setShadow(3, 3, 'rgba(0,0,0,0.5)', 5);
+            // titleText.anchor.set(0.5);
+            // game.stage.disableVisibilityChange = true;
+            // game.add.sprite(0, 0, 'menu-bg');
+            // game.add.existing(titleText);
+        };
+        MyGameState_LevelMap.prototype.createCityAndOasis = function (game, y, text) {
+            var bmd = game.add.bitmapData(800, 100);
+            // bmd.ctx.beginPath();
+            // bmd.ctx.bezierCurveTo(20, 20, 40, 40, 30, 30);
+            // bmd.ctx.bezierCurveTo(100, 20, 140, 40, 30, 30);
+            // bmd.ctx.closePath();
+            bmd.ctx.rect(0, 0, 800, 30);
+            bmd.ctx.fillStyle = '#ffd585';
+            bmd.ctx.fill();
+            var tmpHackIsland = game.add.sprite(0, 0, bmd);
+            var citySprite = game.add.sprite(game.world.centerX + 100, y);
+            citySprite.addChild(tmpHackIsland);
+            [
+                game.add.image(50, 0, 'obelisk2'),
+                game.add.image(100, 0, 'obelisk2'),
+                game.add.image(350, 0, 'obelisk1'),
+                game.add.image(400, 0, 'obelisk1'),
+                game.add.image(220, 0, 'collonade'),
+            ].forEach(function (x) {
+                x.anchor.setTo(0.5, 1);
+                x.scale.setTo(0.4, 0.4);
+                citySprite.addChild(x);
+            });
+            var stella = this.game.add.sprite(220, -60, 'blocks', 'block1');
+            stella.anchor.setTo(0.5, 1);
+            stella.scale.setTo(0.6, 0.6);
+            citySprite.addChild(stella);
+            var cityText = game.add.text(220, -65, text, {
+                font: "40px Helvetica",
+                // font: "50px monospace",
+                fill: '#000',
+                align: "center"
+            });
+            cityText.fontWeight = 'bold';
+            cityText.anchor.setTo(0.5, 1);
+            citySprite.addChild(cityText);
+            return citySprite;
+        };
+        MyGameState_LevelMap.prototype.update = function (game) {
+            this.bgScrollingDunes.tilePosition.x -= 0.3;
+            this.citySprite.x -= 0.4;
+        };
+        return MyGameState_LevelMap;
+    }(Phaser.State));
+    // #endregion
+    var TestGame = /** @class */ (function () {
+        function TestGame(parent) {
+            var gameGlobals = {
+                level: __WEBPACK_IMPORTED_MODULE_3__game_models__["b" /* SampleDebugGameLevels */][1],
+            };
+            // let mainState = new MyGameStateSpriteTest();
+            var game = new Phaser.Game(800, 600, Phaser.CANVAS, parent);
+            game.state.add('menu', new MyGameState_Menu());
+            game.state.add('levels', new MyGameState_LevelMap(gameGlobals));
+            game.state.add('game', new __WEBPACK_IMPORTED_MODULE_2__my_game__["a" /* AcousterNioptesa */].MyGameStateMain(gameGlobals));
+            game.state.start('game');
+            // game.state.start('levels');
+        }
+        return TestGame;
+    }());
+    AcousterNioptesaTest.TestGame = TestGame;
+    var TestGameCodepen = /** @class */ (function () {
+        function TestGameCodepen() {
+            var mainState = new MyGameStateSpriteTest();
+            this.game = new Phaser.Game(800, 600, Phaser.CANVAS, 'content', mainState); // LESSON: Phaser.CANVAS works in codepen, but Phaser.AUTO defaults to WEBGL for some reason and fails
+        }
+        return TestGameCodepen;
+    }());
+    AcousterNioptesaTest.TestGameCodepen = TestGameCodepen;
+})(AcousterNioptesaTest || (AcousterNioptesaTest = {}));
+//======================= for codepen comment these lines... ===================================
+var TestGame = AcousterNioptesaTest.TestGame;
+//======================= ...and uncomment these lines ===================================
+// window.onload = () => { new AcousterNioptesaTest.TestGameCodepen(); };
 // ... and also remove `export` from `export module AcousterNioptesa `
 // ... also codepen does not support this syntax: <ClassName> { ... }, so remove all `<RandomSidescrollingArtifactsConfig>`, etc
 
@@ -1168,7 +1819,7 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TestGameComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_jt_game_my_game__ = __webpack_require__("../../../../../src/app/jt-game/my-game.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_jt_game_sprite_test__ = __webpack_require__("../../../../../src/app/jt-game/sprite-test.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1184,8 +1835,8 @@ var TestGameComponent = /** @class */ (function () {
     function TestGameComponent() {
     }
     TestGameComponent.prototype.ngOnInit = function () {
-        var game = new __WEBPACK_IMPORTED_MODULE_1_app_jt_game_my_game__["a" /* NioptesaGame */](this.myCanvasElem.nativeElement);
-        // var game = new TestGame(this.myCanvasElem.nativeElement);
+        // var game = new NioptesaGame(this.myCanvasElem.nativeElement);
+        var game = new __WEBPACK_IMPORTED_MODULE_1_app_jt_game_sprite_test__["a" /* TestGame */](this.myCanvasElem.nativeElement);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* ViewChild */])('myDiv'),
