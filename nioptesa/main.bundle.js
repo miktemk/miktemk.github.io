@@ -289,7 +289,7 @@ var MyGameGlobals = /** @class */ (function () {
 var SampleDebugGameLevels = [
     {
         name: 'Homerow',
-        vocabFile: '/assets/data/result_asdfghjkl.txt',
+        vocabFile: 'assets/data/result_asdfghjkl.txt',
         keysActive: [
             { pos: QwertyKeys.A, letter: 'A' },
             { pos: QwertyKeys.S, letter: 'S' },
@@ -305,7 +305,7 @@ var SampleDebugGameLevels = [
     },
     {
         name: 'Homerow + E',
-        vocabFile: '/assets/data/result_asdfghjkl_e.txt',
+        vocabFile: 'assets/data/result_asdfghjkl_e.txt',
         keysActive: [
             { pos: QwertyKeys.E, letter: 'E' },
         ],
@@ -323,7 +323,7 @@ var SampleDebugGameLevels = [
     },
     {
         name: 'Letter R',
-        vocabFile: '/assets/data/result_asdfghjkle_r.txt',
+        vocabFile: 'assets/data/result_asdfghjkle_r.txt',
         keysActive: [
             { pos: QwertyKeys.E, letter: 'R' },
         ],
@@ -342,7 +342,7 @@ var SampleDebugGameLevels = [
     },
     {
         name: 'Letter I',
-        vocabFile: '/assets/data/result_asdfghjkler_i.txt',
+        vocabFile: 'assets/data/result_asdfghjkler_i.txt',
         keysActive: [
             { pos: QwertyKeys.E, letter: 'I' },
         ],
