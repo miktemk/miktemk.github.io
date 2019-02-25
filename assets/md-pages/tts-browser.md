@@ -4,7 +4,7 @@ There used to be a plugin for Firefox that activated the Windows' built-in TTS e
 
 But all that is behind us! Introducing the perfect tool for reading web articles and blog posts without having to scroll the page with those greasy lunch fingers. The Text-to-Speech Browser scrolls for you as it reads highlighting the current word.
 
-![screenshot-image](assets/thumbs/Screenshot-tts-browser1.jpg)
+![screenshot-image](assets/screenshots/Screenshot-tts-browser1.jpg)
 
 Limit the spoken text by writing custom jQuery selectors for those elements you wish excluded. Use `Ctrl` + `~` to open the pruning script editor and `Ctrl` + `G` to generate a new template block for the current URL. The following Wikipedia sample pruning is and excellent example of excluding the various Wikipedia clutter leaving just the main article to be read:
 
@@ -36,4 +36,4 @@ Limit the spoken text by writing custom jQuery selectors for those elements you 
 
 Note the text is selected in painful orange to help you see what exctly will be read out loud:
 
-![screenshot-image](assets/thumbs/Screenshot-tts-browser2.png)
+![screenshot-image](assets/screenshots/Screenshot-tts-browser2.png)
