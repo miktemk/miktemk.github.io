@@ -1,5 +1,3 @@
-# Audio booker
-
 Reading audiobooks can be frustrating, especially if you skrew up often. Worry no more! Record your audiobook in small chunks with this app:
 
  - Use `SPACE` to commit chuncks recorded well
