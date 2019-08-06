@@ -1,3 +1,5 @@
+NOTE: if you don't have 7-zip, try [downloading the zip](https://github.com/miktemk/TextToSpeechBrowser/releases/download/1.0.0/TtsBrowser.zip), 2x the size though... :/
+
 There used to be a plugin for Firefox that activated the Windows' built-in TTS engine and the horrible voice of Microsoft Sam would speak the website's content. Since the release of Windows 8 the voice of Microsoft David has become much more human-like, however the content on the websites has also become much more cluttered and the plugin for Firefox no longer works... `:(`
 
 But all that is behind us! Introducing the perfect tool for reading web articles and blog posts without having to scroll the page with those greasy lunch fingers. The Text-to-Speech Browser scrolls for you as it reads highlighting the current word.
